@@ -4,13 +4,11 @@ public class CurrUser {
 
     private String userId;
     private String userName;
-    private String sellerId;
     private String storeName;
 
-    public CurrUser(String userId, String userName, String sellerId, String storeName) {
+    public CurrUser(String userId, String userName, String storeName) {
         this.userId = userId;
         this.userName = userName;
-        this.sellerId = sellerId;
         this.storeName = storeName;
     }
 
@@ -27,9 +25,6 @@ public class CurrUser {
         return userName;
     }
 
-    public String getSellerId() {
-        return sellerId;
-    }
 
     public String getStoreName() {
         return storeName;
