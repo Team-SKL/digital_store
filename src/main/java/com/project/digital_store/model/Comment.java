@@ -6,7 +6,16 @@ public class Comment {
     private String g_id;
     private String u_id;
     private String comment;
-    private String type;
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    private Integer type;
 
     public String getS_id() {
         return s_id;
@@ -40,11 +49,5 @@ public class Comment {
         this.comment = comment;
     }
 
-    public String getType() {
-        return type;
-    }
 
-    public void setType(String type) {
-        this.type = type;
-    }
 }
