@@ -2,9 +2,9 @@ package com.project.digital_store.model;
 
 public class Phone {
 
-    private String p_id;
+    private String g_id;
     private String p_brand;
-    private String p_model;
+    private String g_model;
     private String p_weight;
     private String p_origin_place;
     private String p_cpu;
@@ -21,12 +21,20 @@ public class Phone {
     private String p_charger;
     private String p_os;
 
-    public String getP_id() {
-        return p_id;
+    public String getG_id() {
+        return g_id;
     }
 
-    public void setP_id(String p_id) {
-        this.p_id = p_id;
+    public void setG_id(String g_id) {
+        this.g_id = g_id;
+    }
+
+    public String getG_model() {
+        return g_model;
+    }
+
+    public void setG_model(String g_model) {
+        this.g_model = g_model;
     }
 
     public String getP_brand() {
@@ -35,14 +43,6 @@ public class Phone {
 
     public void setP_brand(String p_brand) {
         this.p_brand = p_brand;
-    }
-
-    public String getP_model() {
-        return p_model;
-    }
-
-    public void setP_model(String p_model) {
-        this.p_model = p_model;
     }
 
     public String getP_weight() {

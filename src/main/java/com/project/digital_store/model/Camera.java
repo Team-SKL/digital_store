@@ -2,9 +2,9 @@ package com.project.digital_store.model;
 
 public class Camera {
 
-    private String c_id;
+    private String g_id;
     private String c_brand;
-    private String c_model;
+    private String g_model;
     private String c_weight;
     private String c_origin_place;
     private String c_classifcation;
@@ -15,12 +15,20 @@ public class Camera {
     private String c_purpose;
     private String c_color;
 
-    public String getC_id() {
-        return c_id;
+    public String getG_id() {
+        return g_id;
     }
 
-    public void setC_id(String c_id) {
-        this.c_id = c_id;
+    public void setG_id(String g_id) {
+        this.g_id = g_id;
+    }
+
+    public String getG_model() {
+        return g_model;
+    }
+
+    public void setG_model(String g_model) {
+        this.g_model = g_model;
     }
 
     public String getC_brand() {
@@ -29,14 +37,6 @@ public class Camera {
 
     public void setC_brand(String c_brand) {
         this.c_brand = c_brand;
-    }
-
-    public String getC_model() {
-        return c_model;
-    }
-
-    public void setC_model(String c_model) {
-        this.c_model = c_model;
     }
 
     public String getC_weight() {
