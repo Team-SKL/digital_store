@@ -8,6 +8,6 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface UserBuyerInfoDao {
 
-    @Select("select * from user where u_id=#{uid} ")
-    User findUserByUserId(@Param("uid") String u_id);
+    @Select("select * from user where u_id=#{u_id} ")
+    User findUserByUserId(@Param("u_id") String u_id);
 }

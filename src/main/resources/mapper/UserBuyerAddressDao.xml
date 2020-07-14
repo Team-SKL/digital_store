@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mappper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.func.User.Buyer.Address.UserBuyerAddressDao.java">
+
+
+    <select id="findAllAddress" resultType="com.project.digital_store.model.Address">
+        //SQL语句
+        select * from address where u_id=#{u_id} and indentity=1
+    </select>
+
+    <update id="updateAddress" >
+        update address
+        set phone=#{phone},province=#{province},city=#{city},detail=#{detail}
+        where a_id=#{a_id}
+    </update>
+
+    <insert id="insertAddress">
+        insert into address
+        values(#{a_id},#{u_id},#{phone},#{province},#{city},#{detail},0)
+    </insert>
+
+    <delete id="deleteAddress">
+        delete from address where a_id=#{a_id}
+    </delete>
+</mapper>
