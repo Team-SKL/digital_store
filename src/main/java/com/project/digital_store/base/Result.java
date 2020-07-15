@@ -32,7 +32,7 @@ public class Result {
      * @return
      */
     public static com.project.digital_store.base.Result fail(){
-        return new com.project.digital_store.base.Result(true,null,null);
+        return new com.project.digital_store.base.Result(false,null,null);
     }
 
     /**
@@ -40,7 +40,7 @@ public class Result {
      * @return
      */
     public static com.project.digital_store.base.Result fail(String message){
-        return new com.project.digital_store.base.Result(true,message,null);
+        return new com.project.digital_store.base.Result(false,message,null);
     }
 
     /**
@@ -48,7 +48,7 @@ public class Result {
      * @return
      */
     public static com.project.digital_store.base.Result fail(String message, Object data){
-        return new com.project.digital_store.base.Result(true,message,data);
+        return new com.project.digital_store.base.Result(false,message,data);
     }
 
 
