@@ -26,7 +26,7 @@ public class UserBuyerCartServiceImpl implements UserBuyerCartService {
         for(Order order:orderList){
             currCart.setG_id(order.getG_id());
             currCart.setG_model(userBuyerCartDao.findGoodsNameByGoodsId(order.getG_id()));
-            currCart.setG_quantity("1");
+            currCart.setG_quantity(userBuyerCartDao.findGoodsQuantityBy(order.getG_id()));
             currCart.setG_price(userBuyerCartDao.findPriceByGoodsId(order.getG_id()));
             currCart.setS_store_name(userBuyerCartDao.findStoreNameBySellerId(userBuyerCartDao.findSellerByGoodsId(order.getG_id())));
             currCart.setPic_path(userBuyerCartDao.findPictureByGoodsId(order.getG_id()));

@@ -19,10 +19,12 @@ public class UserBuyerAddressServiceImpl implements UserBuyerAddressService {
 
     @PostConstruct//表示该方法在初始化时执行，且仅执行一次（由spring控制）
     public void init(){
+
         addressIdNum = userBuyerAddressDao.findMaxNumOfAddressId();
     }
 
     private String getNewAddressId(){
+
         return String.format("%04d", ++addressIdNum);
     }
 

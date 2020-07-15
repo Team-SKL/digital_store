@@ -28,7 +28,7 @@
         select pic_path
         from picture
         where g_id=#{g_id}
-        and pic_path like 'index'
+        and pic_path like '%index.jpg'
     </select>
 
     <select id="findPriceByGoodsId" resultType="string">
@@ -41,6 +41,10 @@
 
     <select id="findStoreNameBySellerId" resultType="string">
         select s_store_name from user where u_id=#{s_id}
+    </select>
+    
+    <select id="findGoodsQuantityBy" resultType="string">
+        select g_quantity from sellers_goods where g_id=#{g_id}
     </select>
 
     <delete id="deleteThisCart">

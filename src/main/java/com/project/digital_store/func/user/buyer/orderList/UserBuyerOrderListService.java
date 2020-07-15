@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface UserBuyerOrderListService {
     List<Order> findOrderByUserId(String u_id);
+    void signOrder(String o_id);
 }

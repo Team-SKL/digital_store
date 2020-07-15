@@ -38,8 +38,6 @@ public class SecurityLoginController {
             return Result.fail("系统升级中...");
         }
 
-
-
     }
 
 
@@ -86,5 +84,10 @@ public class SecurityLoginController {
 
     }
 
+    @RequestMapping("/curruser")
+    public CurrUser user(HttpSession session){
+        CurrUser currUser= (CurrUser) session.getAttribute(Constants.SESSION_ATTR_CURRUSER);
+        return currUser;
+    }
 
 }

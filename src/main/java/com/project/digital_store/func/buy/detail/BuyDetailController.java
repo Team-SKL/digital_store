@@ -27,7 +27,7 @@ public class BuyDetailController {
         return buyDetailService.getGoodInfo(g_id);
     }
 
-   /* @RequestMapping("")
+    /* @RequestMapping("")
     public Result addCart(@PathVariable String g_id){
         buyDetailService.Cartadd(g_id);
         return Result.success("加入购物车成功！");
