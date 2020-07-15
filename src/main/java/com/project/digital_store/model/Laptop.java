@@ -1,9 +1,9 @@
 package com.project.digital_store.model;
 
 public class Laptop {
-    private String l_id;
+    private String g_id;
     private String l_brand;
-    private String l_model;
+    private String g_model;
     private String l_weight;
     private String l_origin_place;
     private String l_screen_size;
@@ -21,12 +21,20 @@ public class Laptop {
     private String l_peculiarity;
     private String l_color;
 
-    public String getL_id() {
-        return l_id;
+    public String getG_id() {
+        return g_id;
     }
 
-    public void setL_id(String l_id) {
-        this.l_id = l_id;
+    public void setG_id(String g_id) {
+        this.g_id = g_id;
+    }
+
+    public String getG_model() {
+        return g_model;
+    }
+
+    public void setG_model(String g_model) {
+        this.g_model = g_model;
     }
 
     public String getL_brand() {
@@ -37,13 +45,6 @@ public class Laptop {
         this.l_brand = l_brand;
     }
 
-    public String getL_model() {
-        return l_model;
-    }
-
-    public void setL_model(String l_model) {
-        this.l_model = l_model;
-    }
 
     public String getL_weight() {
         return l_weight;
