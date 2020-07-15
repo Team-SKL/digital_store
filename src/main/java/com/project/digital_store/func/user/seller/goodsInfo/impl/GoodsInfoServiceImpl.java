@@ -1,5 +1,6 @@
 package com.project.digital_store.func.user.seller.goodsInfo.impl;
 
+import com.project.digital_store.base.Result;
 import com.project.digital_store.dto.GoodInfoDto;
 import com.project.digital_store.dto.GoodsDto;
 import com.project.digital_store.func.buy.select.BuySelectDao;
@@ -22,6 +23,12 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
 
 
         return shelvesGoodsDao.findshelvesGoods(s_id);
+    }
+
+    @Override
+    public void deleteGoods(String[] gids){
+
+
     }
 
 }

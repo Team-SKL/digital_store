@@ -31,6 +31,6 @@ public interface BuyDetailDao {
     @Select("select * from comment_form where g_id = #{g_id} and s_id = #{u_id}")
     public List<Comment> findComment(@Param("g_id") String g_id,@Param("u_id") String u_id);
 
-    public void insertCart(String g_id,String u_id,String s_id);
+    //public void insertCart(String g_id,String u_id,String s_id);
 
 }

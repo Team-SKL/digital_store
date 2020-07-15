@@ -39,12 +39,6 @@ public class CartDto {
         this.o_status = o_status;
     }
 
-    private String o_status;
-    private String o_sub_time;
-    private String o_sign_time;
-    private String s_store_name;
-    private String pic_path;
-
     public String getG_id() {
         return g_id;
     }
@@ -92,31 +86,5 @@ public class CartDto {
     public void setPic_path(String pic_path) {
         this.pic_path = pic_path;
     }
-<<<<<<< HEAD
 
-    public String getO_status() {
-        return o_status;
-    }
-
-    public void setO_status(String o_status) {
-        this.o_status = o_status;
-    }
-
-    public String getO_sub_time() {
-        return o_sub_time;
-    }
-
-    public void setO_sub_time(String o_sub_time) {
-        this.o_sub_time = o_sub_time;
-    }
-
-    public String getO_sign_time() {
-        return o_sign_time;
-    }
-
-    public void setO_sign_time(String o_sign_time) {
-        this.o_sign_time = o_sign_time;
-    }
-=======
->>>>>>> 6d10cda091e4ee1d1c3292aef3201857e6fde4ce
 }

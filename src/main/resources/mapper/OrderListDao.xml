@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.project.digital_store.func.user.seller.orderList.OrderListDao">
+   <select id="findorderList" resultType="com.project.digital_store.dto.CartDto">
+        select
+            o.g_id,o.g_quantity,o.g_price,o.o_status,o.o_sub_time,o.o_sign_time,u.s_store_name,p.pic_path,l.g_model
+        from
+       order_form o left join (
+       select g_id,g_model
+       from laptop
+       union
+       select g_id,g_model
+       from camera
+       union
+       select g_id,g_model
+       from phone
+       ) l on o.g_id = l.g_id left join user u on o.s_id = u.u_id left join picture p on o.g_id = p.g_id
+        where 1=1
+            <if test="u_id != null">
+            and o.s_id = #{u_id}
+            </if>
+            and p.pic_path like '%index'
+   </select>
+
+
+</mapper>

@@ -30,7 +30,7 @@ public class SecurityLoginServiceImpl implements SecurityLoginService {
             throw new BusinessException("用户名或密码错误！");
         }
 
-        if(user.getU_staus().equals(0)&&user.getS_staus().equals(0)) {
+        if(user.getU_status().equals(0)&&user.getS_status().equals(0)) {
             throw new BusinessException("该用户已禁用！");
         }
 
@@ -71,7 +71,7 @@ public class SecurityLoginServiceImpl implements SecurityLoginService {
             throw new BusinessException("用户名或密码错误！");
         }
 
-        if(user.getU_staus().equals(0)&&user.getS_staus().equals(0)) {
+        if(user.getU_status().equals(0)&&user.getS_status().equals(0)) {
             throw new BusinessException("该用户已禁用！");
         }
 

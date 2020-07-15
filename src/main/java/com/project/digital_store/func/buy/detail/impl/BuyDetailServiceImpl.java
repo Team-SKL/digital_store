@@ -44,8 +44,8 @@ public class BuyDetailServiceImpl implements BuyDetailService {
         return goodInfoDto;
     }
 
-    @Override
+   /* @Override
     public void Cartadd(String g_id){
         buyDetailDao.insertCart(g_id,g_id,buyDetailDao.findU_id(g_id));
-    }
+    } */
 }

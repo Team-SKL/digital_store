@@ -28,13 +28,13 @@ public class BuyDetailController {
         return buyDetailService.getGoodInfo(g_id);
     }
 
-    @RequestMapping("")
+   /* @RequestMapping("")
     public Result addCart(@PathVariable String g_id){
         buyDetailService.Cartadd(g_id);
         return Result.success("加入购物车成功！");
-    }
+    } */
 
-    @RequestMapping("/{imgName}")
+  /* @RequestMapping("/{imgName}")
     public void img(@PathVariable String imgName, HttpServletResponse response)throws Exception{
         InputStream in=null;
         try {
@@ -54,6 +54,6 @@ public class BuyDetailController {
             in.close();
         }
 
-    }
+    }*/
 
 }

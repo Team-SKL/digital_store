@@ -9,15 +9,7 @@ public class GoodsDto {
     private String g_quantity;
     private String s_store_name;
     private String g_model;
-    private String pic_path;
 
-    public String getPic_path() {
-        return pic_path;
-    }
-
-    public void setPic_path(String pic_path) {
-        this.pic_path = pic_path;
-    }
 
     public String getPic_path() {
         return pic_path;
