@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.project.digital_store.func.security.home.SecurityHomeDao">
+    <select id="getallGoods" resultType="com.project.digital_store.dto.GoodsDto">
+        select
+        l.g_id,l.g_model,s.s_id,s.g_price,s.g_quantity,u.s_store_name,p.pic_path
+        from
+        (
+        select g_id,g_model
+        from laptop
+        union
+        select g_id,g_model
+        from camera
+        union
+        select g_id,g_model
+        from phone
+
+        ) l left join sellers_goods s on l.g_id = s.g_id left join user u on s.s_id = u.u_id left join picture p on l.g_id = p.g_id
+        where 1=1
+
+    </select>
+
+
+</mapper>

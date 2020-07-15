@@ -20,7 +20,7 @@
        ) l left join sellers_goods s on l.g_id = s.g_id left join user u on s.s_id = u.u_id
         where 1=1
             <if test="info != null">
-            and l.g_model like concat('%','G','%')
+            and l.g_model like concat('%',#{info},'%')
             </if>
    </select>
 
