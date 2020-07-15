@@ -7,11 +7,23 @@ import com.project.digital_store.model.Address;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class UserBuyerAddressServiceImpl implements UserBuyerAddressService {
+
+    private int addressIdNum;
+
+    @PostConstruct//表示该方法在初始化时执行，且仅执行一次（由spring控制）
+    public void init(){
+        addressIdNum = userBuyerAddressDao.findMaxNumOfAddressId();
+    }
+
+    private String getNewAddressId(){
+        return String.format("%04d", ++addressIdNum);
+    }
 
     @Autowired
     private UserBuyerAddressDao userBuyerAddressDao;
@@ -36,7 +48,8 @@ public class UserBuyerAddressServiceImpl implements UserBuyerAddressService {
         }
     }
     @Override
-    public void insert(String a_id,String u_id,String phone,String province,String city,String detail){
+    public void insert(String u_id,String phone,String province,String city,String detail){
+        String a_id=this.getNewAddressId();
         try {
             userBuyerAddressDao.insertAddress(a_id,u_id,phone,province,city,detail);
         } catch (Exception e) {

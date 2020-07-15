@@ -2,6 +2,7 @@ package com.project.digital_store.dto;
 
 public class GoodsDto {
 
+    private String pic_path;
     private String s_id;
     private String g_id;
     private String g_price;
@@ -9,6 +10,14 @@ public class GoodsDto {
     private String s_store_name;
     private String g_model;
     private String pic_path;
+
+    public String getPic_path() {
+        return pic_path;
+    }
+
+    public void setPic_path(String pic_path) {
+        this.pic_path = pic_path;
+    }
 
     public String getPic_path() {
         return pic_path;

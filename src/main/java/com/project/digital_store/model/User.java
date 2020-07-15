@@ -9,8 +9,8 @@ public class User {
     private String u_birthday;
     private String u_id_card;
     private String u_reg_time;
-    private String u_staus;
-    private String s_staus;
+    private String u_status;
+    private String s_status;
     private String s_reg_time;
     private String s_store_name;
 
@@ -70,20 +70,20 @@ public class User {
         this.u_reg_time = u_reg_time;
     }
 
-    public String getU_staus() {
-        return u_staus;
+    public String getU_status() {
+        return u_status;
     }
 
-    public void setU_staus(String u_staus) {
-        this.u_staus = u_staus;
+    public void setU_status(String u_status) {
+        this.u_status = u_status;
     }
 
-    public String getS_staus() {
-        return s_staus;
+    public String getS_status() {
+        return s_status;
     }
 
-    public void setS_staus(String s_staus) {
-        this.s_staus = s_staus;
+    public void setS_status(String s_status) {
+        this.s_status = s_status;
     }
 
     public String getS_reg_time() {

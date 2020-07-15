@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mappper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.func.User.Buyer.Cart.UserBuyerCartDao.java">
+
+    <select id="findOrderByUserId" resultType="com.project.digital_store.model.Order">
+        select * from order_form where u_id=#{u_id} and o_status='0'
+    </select>
+
+    <select id="findGoodsNameByGoodsId" resultType="String ">
+        select g_model
+        from
+        (
+        select g_id,g_model
+        from camera
+        union
+        select g_id,g_model
+        from laptop
+        union
+        select g_id,g_model
+        from phone
+        )
+        where g_id=#{g_id}
+    </select>
+
+    <select id="findPictureByGoodsId" resultType="String">
+        select pic_path
+        from picture
+        where g_id=#{g_id}
+        and pic_path like 'index'
+    </select>
+
+    <select id="findPriceByGoodsId" resultType="String">
+        select g_price from sellers_goods where g_id=#{g_id}
+    </select>
+
+    <select id="findSellerByGoodsId" resultType="String">
+        select s_id from sellers_goods where g_id=#{g_id}
+    </select>
+
+    <select id="findStoreNameBySellerId" resultType="String">
+        select s_store_name from user where u_id=#{s_id}
+    </select>
+
+    <delete id="deleteThisCart">
+        delete from order_form where u_id=#{u_id} and g_id=#{g_id}
+    </delete>
+
+</mapper>

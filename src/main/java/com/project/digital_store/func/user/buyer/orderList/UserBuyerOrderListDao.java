@@ -11,6 +11,6 @@ import java.util.List;
 @Mapper
 public interface UserBuyerOrderListDao {
 
-    @Select("select * from order_form where u_id=#{u_id} ")
-    public List<Order> findOrderByUserId(@Param("u_id") String u_id);
+    @Select("select * from order_form where u_id=#{u_id} and o_status!='0'")
+    List<Order> findOrderByUserId(@Param("u_id") String u_id);
 }
