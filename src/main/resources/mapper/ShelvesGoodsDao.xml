@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.project.digital_store.func.user.seller.goodsInfo.ShelvesGoodsDao">
+   <select id="findshelvesGoods" resultType="com.project.digital_store.dto.GoodsDto">
+        select
+            l.g_id,l.g_model,s.s_id,s.g_price,s.g_quantity,u.s_store_name
+        from
+            sellers_goods s left join (
+        select g_id,g_model
+        from laptop
+        union
+        select g_id,g_model
+        from camera
+        union
+        select g_id,g_model
+        from phone
+        ) l on l.g_id = s.g_id left join user u on s.s_id = u.u_id
+        where
+            s.s_id = #{s_id}
+
+   </select>
+
+
+</mapper>

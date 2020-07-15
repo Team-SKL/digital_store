@@ -72,7 +72,6 @@ public class GoodInfoDto {
         this.s_store_name = s_store_name;
     }
 
-
     public List<Comment> getComments() {
         return comments;
     }
