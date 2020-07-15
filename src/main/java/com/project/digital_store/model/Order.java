@@ -7,7 +7,7 @@ public class Order {
     private String g_id;
     private String g_quantity;
     private String o_sub_time;
-    private String o_staus;
+    private String o_status;
     private String o_sign_time;
 
     public String getO_id() {
@@ -58,12 +58,12 @@ public class Order {
         this.o_sub_time = o_sub_time;
     }
 
-    public String getO_staus() {
-        return o_staus;
+    public String getO_status() {
+        return o_status;
     }
 
-    public void setO_staus(String o_staus) {
-        this.o_staus = o_staus;
+    public void setO_status(String o_status) {
+        this.o_status = o_status;
     }
 
     public String getO_sign_time() {

@@ -7,9 +7,9 @@ import java.util.List;
 @Service
 public interface UserBuyerAddressService {
 
-    public List<Address> select(String u_id);
-    public void update(String phone,String province,String city,String detail);
-    public void insert(String a_id,String u_id,String phone,String province,String city,String detail);
-    public void delete(String a_id);
+    List<Address> select(String u_id);
+    void update(String phone,String province,String city,String detail);
+    void insert(String u_id,String phone,String province,String city,String detail);
+    void delete(String a_id);
 
 }

@@ -5,6 +5,10 @@
 <mapper namespace="com.example.demo.func.User.Buyer.Address.UserBuyerAddressDao.java">
 
 
+    <select id="findMaxNumOfAddressId" resultType="int">
+        select ifnull(convert(substring(max(a_id),1),unsigned),0) from address
+    </select>
+
     <select id="findAllAddress" resultType="com.project.digital_store.model.Address">
         //SQL语句
         select * from address where u_id=#{u_id} and indentity=1

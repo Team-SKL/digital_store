@@ -45,15 +45,16 @@ public class UserBuyerAddressController {
 
     @RequestMapping("/insert")
     public Result insert(String phone,String province,String city,String detail,HttpSession session){
+        /*
         long time = System.currentTimeMillis();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
         String now_time = dateFormat.format(time);
-
+        */
         CurrUser currUser= (CurrUser) session.getAttribute(Constants.SESSION_ATTR_CURRUSER);
         String u_id=currUser.getUserId();
 
         try {
-            userBuyerAddressService.insert(now_time,u_id,phone,province,city,detail);
+            userBuyerAddressService.insert(u_id,phone,province,city,detail);
             return Result.success("添加成功");
         } catch (SysException e) {
             return Result.fail("添加失败");
