@@ -7,6 +7,7 @@ import com.project.digital_store.base.Result;
 import com.project.digital_store.exception.BusinessException;
 import com.project.digital_store.exception.SysException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +21,9 @@ public class SecurityLoginController {
     private SecurityLoginService securityLoginService;
 
     @RequestMapping("/user") //用户登录
+    @CrossOrigin
     public Result userLogin(String u_id, String u_pwd, HttpSession session) {
+        System.out.println(u_id);
 
         try {
             CurrUser currUser = securityLoginService.userCheckLogin(u_id, u_pwd);

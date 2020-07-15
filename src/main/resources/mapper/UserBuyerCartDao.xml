@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mappper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.demo.func.User.Buyer.Cart.UserBuyerCartDao.java">
+<mapper namespace="com.project.digital_store.func.user.buyer.cart.UserBuyerCartDao">
 
     <select id="findOrderByUserId" resultType="com.project.digital_store.model.Order">
         select * from order_form where u_id=#{u_id} and o_status='0'
     </select>
 
-    <select id="findGoodsNameByGoodsId" resultType="String ">
+    <select id="findGoodsNameByGoodsId" resultType="string">
         select g_model
         from
         (
@@ -24,22 +24,22 @@
         where g_id=#{g_id}
     </select>
 
-    <select id="findPictureByGoodsId" resultType="String">
+    <select id="findPictureByGoodsId" resultType="string">
         select pic_path
         from picture
         where g_id=#{g_id}
         and pic_path like 'index'
     </select>
 
-    <select id="findPriceByGoodsId" resultType="String">
+    <select id="findPriceByGoodsId" resultType="string">
         select g_price from sellers_goods where g_id=#{g_id}
     </select>
 
-    <select id="findSellerByGoodsId" resultType="String">
+    <select id="findSellerByGoodsId" resultType="string">
         select s_id from sellers_goods where g_id=#{g_id}
     </select>
 
-    <select id="findStoreNameBySellerId" resultType="String">
+    <select id="findStoreNameBySellerId" resultType="string">
         select s_store_name from user where u_id=#{s_id}
     </select>
 

@@ -2,16 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mappper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.demo.func.User.Buyer.Address.UserBuyerAddressDao.java">
-
+<mapper namespace="com.project.digital_store.func.User.Buyer.Address.UserBuyerAddressDao">
 
     <select id="findMaxNumOfAddressId" resultType="int">
         select ifnull(convert(substring(max(a_id),1),unsigned),0) from address
     </select>
-
     <select id="findAllAddress" resultType="com.project.digital_store.model.Address">
         //SQL语句
-        select * from address where u_id=#{u_id} and indentity=1
+        select * from address where u_id=#{u_id} and indentity='1'
     </select>
 
     <update id="updateAddress" >
@@ -22,7 +20,7 @@
 
     <insert id="insertAddress">
         insert into address
-        values(#{a_id},#{u_id},#{phone},#{province},#{city},#{detail},0)
+        values(#{a_id},#{u_id},#{phone},#{province},#{city},#{detail},'0')
     </insert>
 
     <delete id="deleteAddress">
