@@ -10,6 +10,7 @@ public class GoodsDto {
     private String s_store_name;
     private String g_model;
 
+
     public String getPic_path() {
         return pic_path;
     }

@@ -10,4 +10,6 @@ public interface GoodsInfoService {
 
 
     public List<GoodsDto> getshelvesGoods(String s_id);
+
+    void deleteGoods(String[] gids);
 }
