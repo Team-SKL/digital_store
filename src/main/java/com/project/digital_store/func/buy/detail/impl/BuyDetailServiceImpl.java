@@ -16,11 +16,11 @@ public class BuyDetailServiceImpl implements BuyDetailService {
     private BuyDetailDao buyDetailDao;
 
     @Override
-    public GoodInfoDto getGoodInfo(String u_id,String g_id){
+    public GoodInfoDto getGoodInfo(String g_id){
         GoodInfoDto goodInfoDto=new GoodInfoDto();
-        goodInfoDto.setU_id(u_id);
-        goodInfoDto.setS_store_name(buyDetailDao.findStoreName(u_id));
         goodInfoDto.setG_id(g_id);
+        goodInfoDto.setU_id(buyDetailDao.findU_id(g_id));
+        goodInfoDto.setS_store_name(buyDetailDao.findStoreName(goodInfoDto.getU_id()));
         Camera camera=new Camera();
         Laptop laptop=new Laptop();
         Phone phone=new Phone();
@@ -39,8 +39,13 @@ public class BuyDetailServiceImpl implements BuyDetailService {
         List<Picture> pictures=buyDetailDao.findPicture(g_id);
         goodInfoDto.setPictures(pictures);
 
-        List<Comment> comments=buyDetailDao.findComment(g_id,u_id);
+        List<Comment> comments=buyDetailDao.findComment(g_id,goodInfoDto.getU_id());
         goodInfoDto.setComments(comments);
         return goodInfoDto;
+    }
+
+    @Override
+    public void Cartadd(String g_id){
+        buyDetailDao.insertCart(g_id,g_id,buyDetailDao.findU_id(g_id));
     }
 }

@@ -8,15 +8,6 @@ public class GoodInfoDto {
 
     private String u_id;
     private String g_id;
-
-    public String getG_id() {
-        return g_id;
-    }
-
-    public void setG_id(String g_id) {
-        this.g_id = g_id;
-    }
-
     private String s_store_name;
     private Camera camera;
     private Laptop laptop;
@@ -78,6 +69,14 @@ public class GoodInfoDto {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public String getG_id() {
+        return g_id;
+    }
+
+    public void setG_id(String g_id) {
+        this.g_id = g_id;
     }
 
 }

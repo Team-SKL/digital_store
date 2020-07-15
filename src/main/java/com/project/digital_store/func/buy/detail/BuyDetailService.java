@@ -5,5 +5,7 @@ import com.project.digital_store.dto.GoodInfoDto;
 public interface BuyDetailService {
 
 
-    GoodInfoDto getGoodInfo(String u_id,String g_id);
+    GoodInfoDto getGoodInfo(String g_id);
+
+    void Cartadd(String g_id);
 }
