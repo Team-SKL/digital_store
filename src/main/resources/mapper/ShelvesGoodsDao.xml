@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.project.digital_store.func.user.seller.goodsInfo.ShelvesGoodsDao">
+<mapper namespace="com.project.digital_store.func.user.sellerddfsdfas.goodsInfo.ShelvesGoodsDao">
     <select id="findshelvesGoods" resultType="com.project.digital_store.dto.GoodsDto">
         select
             l.g_id,l.g_model,s.s_id,s.g_price,s.g_quantity,u.s_store_name

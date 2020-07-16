@@ -1,6 +1,9 @@
 package com.project.digital_store.func.buy.detail;
 
 
+import com.project.digital_store.base.Constants;
+import com.project.digital_store.base.CurrUser;
+import com.project.digital_store.base.Result;
 import com.project.digital_store.dto.GoodInfoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,8 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -27,13 +30,14 @@ public class BuyDetailController {
         return buyDetailService.getGoodInfo(g_id);
     }
 
-    /* @RequestMapping("")
-    public Result addCart(@PathVariable String g_id){
-        buyDetailService.Cartadd(g_id);
+    @RequestMapping("")
+    public Result addCart(@PathVariable String g_id, HttpSession session){
+        CurrUser currUser= (CurrUser) session.getAttribute(Constants.SESSION_ATTR_CURRUSER);
+        buyDetailService.Cartadd(g_id,currUser.getUserId());
         return Result.success("加入购物车成功！");
-    } */
+    }
 
-  /* @RequestMapping("/{imgName}")
+    @RequestMapping("/{imgName}")
     public void img(@PathVariable String imgName, HttpServletResponse response)throws Exception{
         InputStream in=null;
         try {
@@ -53,6 +57,6 @@ public class BuyDetailController {
             in.close();
         }
 
-    }*/
+    }
 
 }

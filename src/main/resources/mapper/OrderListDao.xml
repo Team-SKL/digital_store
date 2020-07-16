@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.project.digital_store.func.user.seller.orderList.OrderListDao">
+<mapper namespace="com.project.digital_store.func.user.sellerddfsdfas.orderList.OrderListDao">
    <select id="findorderList" resultType="com.project.digital_store.dto.CartDto">
         select
             o.g_id,o.g_quantity,o.g_price,o.o_status,o.o_sub_time,o.o_sign_time,u.s_store_name,p.pic_path,l.g_model

@@ -1,7 +1,6 @@
 package com.project.digital_store.func.buy.select;
 
 import com.project.digital_store.dto.GoodsDto;
-import com.project.digital_store.func.buy.detail.BuyDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

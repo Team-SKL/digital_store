@@ -31,8 +31,9 @@ public class AddGoodsServiceImpl implements AddGoodsService {
 
     @Override
     public void Goodsadd(GoodInfoDto goodInfoDto){
-        goodInfoDto.setG_id(this.getNewGoodsId());
 
+        goodInfoDto.setG_id(this.getNewGoodsId());
+        addGoodsDao.insertNewEmp(goodInfoDto);
     }
 
 }
